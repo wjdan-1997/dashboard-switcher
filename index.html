@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Social Media Dashboard
+  Total Followers: 23,004
+
+  Dark Mode
+
+  
+
+  
+
+  @nathanf
+  1044
+  Followers
+  99 Today
+
+  @realnathanf
+  11k
+  Followers
+  1099 Today
+
+  Nathan F.
+  8239
+  Subscribers
+  144 Today
+
+
+
+  Overview - Today
+
+  Page Views
+  87
+  3%
+
+  Likes
+  52
+  2%
+
+  Likes
+  5462
+  2257%
+
+  Profile Views
+  52k
+  1375%
+
+  Retweets
+  117
+  303%
+
+  Likes
+  507
+  553%
+
+  Likes
+  107
+  19%
+
+  Total Views
+  1407
+  12% -->
+  
+  
+  
+  
+  <div class="main-cotainer">
+    <div class="top-container">
+     <div class="header">
+       <div class="header-left">
+        <h1>Social Media Dashboard</h1>
+        <p>  Total Followers: 23,004</p>
+       </div>
+     
+        <div class="header-right">
+
+          <label for="checkbox">Dark Mode</label>
+          <label class="switch">
+            <input type="checkbox" id="myCheck" name="checkbox" onclick="colorChange()" checked>
+          <span class="slider round">
+           
+          </span>
+        </label>
+          
+        </div>
+     </div>
+
+     <div class="cards">
+       
+       <!--  -->
+       
+       <div class="social-cards">
+        <div class="social-card fb">
+          <p class="add">@nathanf</p>
+          <h1>1987</h1>
+          <p>FOLLOWERS</p>
+          <p class="green"><span class="arrow-up"></span>12 Today</p>
+        </div>
+        <div class="social-card tw">
+          <p class="add">@nathanf</p>
+          <h1>1044</h1>
+          <p>FOLLOWERS</p>
+          <p class="green"><span class="arrow-up"></span>99 Today</p>
+        </div>
+        <div class="social-card insta">
+          <p class="add">@realnathanf</p>
+          <h1>11k</h1>
+          <p>FOLLOWERS</p>
+          <p class="green"><span class="arrow-up"></span>1099 Today</p>
+        </div>
+        <div class="social-card yt">
+          <p class="add">Nathan F.</p>
+          <h1>8239</h1>
+          <p>SUBSCRIBERS</p>
+          <p class="red"><span class="arrow-down"></span>144 Today</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+    <div class="container-bottom">
+      <div class="overview">
+        <h2>Overview - Today</h2>
+      </div>
+      <div class="overview-cards">
+        <div class="card status-card">
+          <p>Page Views</p>
+          <div class="fb"></div>
+          <h2>87</h2>
+          <p class="green"><span class="arrow-up"></span>3%</p>
+        </div>
+        <div class="card status-card">
+          <p>Likes</p>
+          <div class="fb"></div>
+          <h2>52</h2>
+          <p class="red"><span class="arrow-down"></span>2%</p>
+        </div>
+        <div class="card status-card">
+          <p>Likes</p>
+          <div class="insta"></div>
+          <h2>5462</h2>
+          <p class="green"><span class="arrow-up"></span>2257%</p>
+        </div>
+        <div class="card status-card">
+          <p>Profile Views</p>
+          <div class="insta"></div>
+          <h2>52k</h2>
+          <p class="green"><span class="arrow-up"></span>1375%</p>
+        </div>
+        <div class="card status-card">
+          <p>Retweets</p>
+          <div class="tw"></div>
+          <h2>117</h2>
+          <p class="green"><span class="arrow-up"></span>303%</p>
+        </div>
+        <div class="card status-card">
+          <p>Likes</p>
+          <div class="tw"></div>
+          <h2>507</h2>
+          <p class="green"><span class="arrow-up"></span>553%</p>
+        </div>
+        <div class="card status-card">
+          <p>Likes</p>
+          <div class="yt"></div>
+          <h2>107</h2>
+          <p class="red"><span class="arrow-down"></span>19%</p>
+        </div>
+        <div class="card status-card">
+          <p>Total Views</p>
+          <div class="yt"></div>
+          <h2>1407</h2>
+          <p class="red"><span class="arrow-down"></span>12%</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+function colorChange(){
+let checkbox =document.getElementById('myCheck');
+let body = document.querySelector('body');
+let card =document.querySelector('.cards');
+let overviews = document.querySelector('.overview-card')
+if(checkbox.checked == true){
+    body.classList.remove('active');
+    overviews.classList.remove('active');
+    card.classList.remove('active');
+}else {
+    body.classList.add('active');
+    overviews.classList.add('active');
+    card.classList.add('active');
+}
+}
+  </script>
+</body>
+</html>
